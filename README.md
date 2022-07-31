@@ -184,30 +184,30 @@ From the `near-cli` container:
 
 ```
 near view shupcode.factory.shardnet.near get_accounts '{"from_index": 0, "limit": 10}' --accountId shupcode.shardnet.near
+View call: shupcode.factory.shardnet.near.get_accounts({"from_index": 0, "limit": 10})
 ```
 
 Result:
 
 ```json
-View call: shupcode.factory.shardnet.near.get_accounts({"from_index": 0, "limit": 10})
 [
   {
-    account_id: 'shupcode.shardnet.near',
-    unstaked_balance: '0',
-    staked_balance: '528004564353521471424462448',
-    can_withdraw: true
+    "account_id": "shupcode.shardnet.near",
+    "unstaked_balance": "0",
+    "staked_balance": "528004564353521471424462448",
+    "can_withdraw": true
   },
   {
-    account_id: '0000000000000000000000000000000000000000000000000000000000000000',
-    unstaked_balance: '0',
-    staked_balance: '2061448010580448949104',
-    can_withdraw: true
+    "account_id": "0000000000000000000000000000000000000000000000000000000000000000",
+    "unstaked_balance": "0",
+    "staked_balance": "2061448010580448949104",
+    "can_withdraw": true
   },
   {
-    account_id: 'tarra.shardnet.near',
-    unstaked_balance: '1',
-    staked_balance: '48999999999999999999999999',
-    can_withdraw: true
+    "account_id": "tarra.shardnet.near",
+    "unstaked_balance": "1",
+    "staked_balance": "48999999999999999999999999",
+    "can_withdraw": true
   }
 ]
 ```
