@@ -1,6 +1,7 @@
 # near-stakewars-iii
 
-###Staking Pool URL:
+## Staking Pool URL:
+
 https://explorer.shardnet.near.org/accounts/shupcode.factory.shardnet.near
 
 ## Challenge 1
