@@ -145,11 +145,25 @@ near-0                               1/1     Running     0          35h
 `kubectl logs near-0`:
 
 ```log
-2022-07-31T13:39:55.737230Z  INFO stats: # 1575381 61iDg5sSLDTtwpME3af8Vnb4aBJUA1rz5eA4WpF9Sdgq Validator | 100 validators 30 peers ⬇ 922 kB/s ⬆ 58.1 kB/s 0.00 bps 0 gas/s CPU: 8%, Mem: 3.27 GB
-2022-07-31T13:39:55.738383Z DEBUG stats: EpochId(`Fy91kjHqiFvS3jn5sLp8j7gg4ibAD6thCK7CM67tQdMY`) Blocks in progress: 149 Chunks in progress: 16 Orphans: 0
+2022-07-31T15:06:36.335579Z  INFO stats: # 1577217 2zT6SrLBreA9tVWuh3a28M52QTdvQeEaMCFRem4HUzSp Validator | 100 validators 30 peers ⬇ 75.3 kB/s ⬆ 66.5 kB/s 0.10 bps 44.6 Ggas/s CPU: 8%, Mem: 3.11 GB
+2022-07-31T15:06:36.336344Z DEBUG stats: EpochId(`Fy91kjHqiFvS3jn5sLp8j7gg4ibAD6thCK7CM67tQdMY`) Blocks in progress: 149 Chunks in progress: 16 Orphans: 0
+2022-07-31T15:06:46.337153Z  INFO stats: # 1577220 9GG63GPMpFUkqmpqkahhqSgn1RkVLf2k7wgon55e8KPC Validator | 100 validators 30 peers ⬇ 64.4 kB/s ⬆ 57.8 kB/s 0.10 bps 4.42 Tgas/s CPU: 11%, Mem: 3.11 GB
+2022-07-31T15:06:46.337927Z DEBUG stats: EpochId(`Fy91kjHqiFvS3jn5sLp8j7gg4ibAD6thCK7CM67tQdMY`) Blocks in progress: 149 Chunks in progress: 16 Orphans: 0
+2022-07-31T15:06:47.697333Z  INFO near_network::peer_manager::peer_manager_actor: Bandwidth stats total_bandwidth_used_by_all_peers=3755844 total_msg_received_count=7609 max_max_record_num_messages_in_progress=32
+2022-07-31T15:06:56.337994Z  INFO stats: # 1577222 Bm1xoHXZ4skYkZ7ddpxZbkMVNNttPVfe8sYbU5wczUwd Validator | 100 validators 30 peers ⬇ 63.9 kB/s ⬆ 56.5 kB/s 0.10 bps 3.10 Tgas/s CPU: 9%, Mem: 3.11 GB
+2022-07-31T15:06:56.338824Z DEBUG stats: EpochId(`Fy91kjHqiFvS3jn5sLp8j7gg4ibAD6thCK7CM67tQdMY`) Blocks in progress: 149 Chunks in progress: 16 Orphans: 0
+2022-07-31T15:07:06.339180Z  INFO stats: # 1577225 47CxnZeq4fN5kkYMoYr77QvVrrJrr7nD6kYaS3XXSyUj Validator | 100 validators 30 peers ⬇ 67.0 kB/s ⬆ 58.9 kB/s 0.10 bps 7.59 Tgas/s CPU: 11%, Mem: 3.11 GB
+2022-07-31T15:07:06.339995Z DEBUG stats: EpochId(`Fy91kjHqiFvS3jn5sLp8j7gg4ibAD6thCK7CM67tQdMY`) Blocks in progress: 149 Chunks in progress: 16 Orphans: 0
+2022-07-31T15:07:16.340111Z  INFO stats: # 1577228 CqCwmNqxJs6vJKs8u11gkMUoh69SJssD8YzxnY7ZcuuS Validator | 100 validators 30 peers ⬇ 70.4 kB/s ⬆ 60.3 kB/s 0.20 bps 4.84 Tgas/s CPU: 12%, Mem: 3.11 GB
+2022-07-31T15:07:16.340970Z DEBUG stats: EpochId(`Fy91kjHqiFvS3jn5sLp8j7gg4ibAD6thCK7CM67tQdMY`) Blocks in progress: 149 Chunks in progress: 16 Orphans: 0
+2022-07-31T15:07:26.340817Z  INFO stats: # 1577231 8AqHMfDTAp64A3bLj5JGvgfgN7Fm7onkbXa7H26oo9Gx Validator | 100 validators 30 peers ⬇ 86.0 kB/s ⬆ 73.7 kB/s 0.20 bps 4.86 Tgas/s CPU: 12%, Mem: 3.11 GB
+2022-07-31T15:07:26.341630Z DEBUG stats: EpochId(`Fy91kjHqiFvS3jn5sLp8j7gg4ibAD6thCK7CM67tQdMY`) Blocks in progress: 149 Chunks in progress: 16 Orphans: 0
+2022-07-31T15:07:36.341324Z  INFO stats: # 1577236 J8MR49ArZfk3XeQnE5vU3LJTJBFRbi4w16Ri8t2gd2TX Validator | 100 validators 30 peers ⬇ 101 kB/s ⬆ 87.1 kB/s 0.40 bps 22.8 Tgas/s CPU: 16%, Mem: 3.11 GB
+2022-07-31T15:07:36.342461Z DEBUG stats: EpochId(`Fy91kjHqiFvS3jn5sLp8j7gg4ibAD6thCK7CM67tQdMY`) Blocks in progress: 149 Chunks in progress: 16 Orphans: 0
 ```
 
-###check node version and blocks produced/expected:
+### check node version and blocks produced/expected:
+
 Bashing into this `neard` kubernetes pod:
 
 ```jq
@@ -164,7 +178,8 @@ curl -s -d '{"jsonrpc": "2.0", "method": "validators", "id": "shupcode", "params
 {"account_id":"shupcode.factory.shardnet.near","is_slashed":false,"num_expected_blocks":0,"num_expected_chunks":1,"num_produced_blocks":0,"num_produced_chunks":1,"public_key":"ed25519:GXRs2sET5RPASHcQPayP4xxDJBS1TWcszyQMrEe2PuwB","shards":[1],"stake":"558002855996833630000000000"}
 ```
 
-###check delegations
+### check delegations
+
 From the `near-cli` container:
 
 ```
@@ -199,7 +214,8 @@ View call: shupcode.factory.shardnet.near.get_accounts({"from_index": 0, "limit"
 
 ## Challenge 5
 
-###Amaazon Web Services
+### Amazon Web Services
+
 AWS - Kubernetes EKS cluster
 
 Users should be familiar with Kubernetes and setting up of EKS on AWS
@@ -224,10 +240,12 @@ cost of m6i.xlarge reserved instance:
 
 ## Challenge 6
 
-###Staking Pool URL:
+### Staking Pool URL:
+
 https://explorer.shardnet.near.org/accounts/shupcode.factory.shardnet.near
 
-###Kubernetes Cronjob
+### Kubernetes Cronjob
+
 We need to deploy a `near-cli` container as a cronjob to periodically ping the staking pool
 
 https://kubernetes.io/docs/concepts/workloads/controllers/cron-jobs/
